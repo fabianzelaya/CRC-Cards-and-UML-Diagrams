@@ -7,11 +7,11 @@ Before writing code for a complex problem, you need to design a solution. The me
 
 CRC cards and UML diagrams help you discover and record this information.
 
-`Step 1` Discover classes.
+`Step 1` **Discover classes.**
 
 Highlight the nouns in the problem description. Make a list of the nouns. Cross out those that don’t seem to be reasonable candidates for classes.
 
-`Step 2` Discover responsibilities.
+`Step 2` **Discover responsibilities.**
 
 Make a list of the major tasks that your system needs to fulfill. From those tasks, pick one that is not trivial and that is intuitive to you. Find a class that is responsible for carrying out that task. Make an index card and write the name and the task on it. Now ask yourself how an object of the class can carry out the task. It probably needs help from other objects. Then make CRC cards for the classes to which those objects belong and write the responsibilities on them.
 
@@ -19,7 +19,7 @@ Don’t be afraid to cross out, move, split, or merge responsibilities. Rip up c
 
 You are done when you have walked through all major tasks and are satisfied that they can all be solved with the classes and responsibilities that you discovered.
 
-`Step 3` Describe relationships.
+`Step 3` **Describe relationships.**
 
 Make a class diagram that shows the relationships between all the classes that you discovered.
 
