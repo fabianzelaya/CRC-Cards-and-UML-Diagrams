@@ -43,6 +43,38 @@ You need not list all attributes and methods in a particular diagram. Just list 
 Also, don’t list as an attribute what you also draw as an aggregation. If you denote by aggregation the fact that a `Car` has `Tire` objects, don’t add an attribute `tires`.
 
 
+# Multiplicities
+Some designers like to write multiplicities at the end(s) of an aggregation relationship to denote how many objects are aggregated. The notations for the most common multiplicities are:
+
+* any number (zero or more): *
+* one or more: 1..*
+* zero or one: 0..1
+* exactly one: 1
+
+Figure 11.5.1 shows that a customer has one or more bank accounts.
+
+### Figure 11.5.1: An Aggregation Relationship with Multiplicities.
+![embedded_image_1_e44aed4e-99c8-4b99-989d-ca98bab2e177_UxPnsu3LFPheZgXpTgOa](https://user-images.githubusercontent.com/71942518/188543660-add8506f-4169-4076-8cfa-38b8d49ec1b3.png)
+
+
+# Aggregation, Association, and Composition
+Some designers find the aggregation or has-a terminology unsatisfactory. For example, consider customers of a bank. Does the bank “have” customers? Do the customers “have” bank accounts, or does the bank “have” them? Which of these “has” relationships should be modeled by aggregation? This line of thinking can lead us to premature implementation decisions.
+
+Early in the design phase, it makes sense to use a more general relationship between classes called association. A class is associated with another if you can navigate from objects of one class to objects of the other class. For example, given a `Bank` object, you can navigate to `Customer` objects, perhaps by accessing an instance variable, or by making a database lookup. (Definition of **association**: A relationship between classes in which one can navigate from objects of one class to objects of the other class, usually by following object references. )
+
+The UML notation for an association relationship is a solid line, with optional arrows that show in which directions you can navigate the relationship. You can also add words to the line ends to further explain the nature of the relationship. Figure 11.6.1 shows that you can navigate from `Bank` objects to `Customer` objects, but you cannot navigate the other way around. That is, in this particular design, the `Customer` class has no mechanism to determine in which banks it keeps its money.
+
+### Figure 11.6.1: An Association Relationship.
+![embedded_image_1_bb2defa2-ef37-4325-95ba-94cd7011a46d_UxPnsu3LFPheZgXpTgOa](https://user-images.githubusercontent.com/71942518/188543763-654c2795-d2bc-4418-aed8-78cd47e7e923.png)
+
+The UML standard also recognizes a stronger form of the aggregation relationship called composition, where the aggregated objects do not have an existence independent of the containing object. For example, composition models the relationship between a bank and its accounts. If a bank closes, the account objects cease to exist as well. In the UML notation, composition looks like aggregation with a filled-in diamond, as shown in Figure 11.6.2 (Definition of **composition**: An aggregation relationship where the aggregated objects do not have an existence independent of the containing object.)
+
+### Figure 11.6.2: A Composition Relationship.
+![embedded_image_1_72bdb6df-d67d-48a0-b887-ab11f7661bbb_UxPnsu3LFPheZgXpTgOa](https://user-images.githubusercontent.com/71942518/188543816-38d96f0c-a147-4123-a1a9-cfeda9378a5b.png)
+
+Frankly, the differences between aggregation, association, and composition can be confusing, even to experienced designers. If you find the distinction helpful, by all means use the relationship that you find most appropriate. But don’t spend time pondering subtle differences between these concepts. From the practical point of view of a Java programmer, it is useful to know when objects of one class have references to objects of another class. The aggregation or has-a relationship accurately describes this phenomenon.
+
+
 
 ## Thanks for watching!
 
