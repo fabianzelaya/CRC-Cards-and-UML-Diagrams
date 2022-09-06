@@ -35,7 +35,7 @@ Sometimes it is useful to indicate class attributes and methods in a class diagr
 
 You can indicate attributes and methods in a class diagram by dividing a class rectangle into three compartments, with the class name in the top, attributes in the middle, and methods in the bottom (see Figure 11.4.1).
 
-## Figure 11.4.1: Attributes and Methods in a Class Diagram.
+### Figure 11.4.1: Attributes and Methods in a Class Diagram.
 ![embedded_image_1_ae27ff57-d860-4eee-9163-fedc2b4a980c_UxPnsu3LFPheZgXpTgOa](https://user-images.githubusercontent.com/71942518/188543175-ea861ada-fec8-4143-80d3-3e3fbc1b7ca1.png)
 
 You need not list all attributes and methods in a particular diagram. Just list the ones that are helpful for understanding whatever point you are making with a particular diagram.
